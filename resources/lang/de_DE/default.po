@@ -2087,11 +2087,11 @@ msgstr "Mitgliedschaft"
 
 #: includes/view/AngelTypes_view.php:551
 msgid ""
-"This angeltype requires the attendance at an introduction meeting. "
-"You might find additional information in the description."
+"This angeltype is restricted by double-opt-in by a team supporter. Please "
+"message corona@stuvus.uni-stuttgart.de."
 msgstr ""
-"Dieser Engeltyp benötigt eine Einweisung bei einem Einführungstreffen."
-"Weitere Informationen findest du möglicherweise in der Beschreibung."
+"Dieser Engeltyp muss zusätzlich von einem Team-Supporter freigeschaltet "
+"werden. Bitte schreibe eine Mail an corona@stuvus.uni-stuttgart.de."
 
 #: includes/view/AngelTypes_view.php:586
 msgid "FAQ"
