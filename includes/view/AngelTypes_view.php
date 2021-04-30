@@ -548,7 +548,7 @@ function AngelTypes_about_view_angeltype($angeltype)
 
     if ($angeltype['restricted']) {
         $html .= info(
-            __('This angeltype requires the attendance at an introduction meeting. You might find additional information in the description.'),
+            __('This angeltype is restricted by double-opt-in by a team supporter. Please message corona@stuvus.uni-stuttgart.de.'),
             true
         );
     }
