@@ -44,8 +44,8 @@ function guest_register()
     $mobile = '';
     $email = '';
     $pronoun = '';
-    $email_shiftinfo = false;
-    $email_by_human_allowed = false;
+    $email_shiftinfo = true;
+    $email_by_human_allowed = true;
     $email_news = false;
     $tshirt_size = '';
     $password_hash = '';
@@ -355,7 +355,7 @@ function guest_register()
                                 __(
                                     'The %s is allowed to send me an email (e.g. when my shifts change)',
                                     [config('app_name')]
-                                ),
+                                ) . ' ' . entry_required(), 
                                 $email_shiftinfo
                             ),
                             form_checkbox(
@@ -365,7 +365,7 @@ function guest_register()
                             ),
                             form_checkbox(
                                 'email_by_human_allowed',
-                                __('Humans are allowed to send me an email (e.g. for ticket vouchers)'),
+                                __('Humans are allowed to send me an email (e.g. for ticket vouchers)') . ' ' .entry_required(),
                                 $email_by_human_allowed
                             ),
                         ])
@@ -421,10 +421,22 @@ function guest_register()
                     ]),
                     $enable_user_name ? div('row', [
                         div('col-sm-6', [
+<<<<<<< HEAD
                             form_text('prename', __('First name'), $preName, false, 64, 'given-name')
+||||||| parent of 37501c1e (zeus anpassungen)
+                            form_text('prename', __('First name'), $preName)
+=======
+                            form_text('prename', __('First name')  . ' ' . entry_required(), $preName)
+>>>>>>> 37501c1e (zeus anpassungen)
                         ]),
                         div('col-sm-6', [
+<<<<<<< HEAD
                             form_text('lastname', __('Last name'), $lastName, false, 64, 'family-name')
+||||||| parent of 37501c1e (zeus anpassungen)
+                            form_text('lastname', __('Last name'), $lastName)
+=======
+                            form_text('lastname', __('Last name') . ' ' . entry_required(), $lastName)
+>>>>>>> 37501c1e (zeus anpassungen)
                         ])
                     ]) : '',
                     form_info(entry_required() . ' = ' . __('Entry required!'))
